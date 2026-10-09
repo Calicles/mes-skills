@@ -1,33 +1,45 @@
-"""Fabrique les paquets .skill de livrables/skills/paquets/.
+"""Régénère les copies des fichiers communs, les paquets et mes-skills.zip.
 
-Chaque paquet contient le dossier complet du skill. Si son SKILL.md renvoie à
-references/regles-communes.md, la source unique commun/regles-communes.md y est
-ajoutée à cet emplacement ; s'il renvoie à references/hook-porte1/, le kit
-commun/hook-porte1/ (script et configuration du hook de la porte 1) aussi.
+Source unique : commun/regles-communes.md et commun/hook-porte1/.
+1. Copie dans chaque skill qui y renvoie : <skill>/references/regles-communes.md
+   et <skill>/references/hook-porte1/ (copies générées, ne pas les modifier).
+2. Fabrique paquets/<skill>.skill (le dossier complet du skill).
+3. Fabrique mes-skills.zip (un dossier par skill, SKILL.md à sa racine).
 
-Usage (depuis livrables/skills/) : python3 fabriquer_paquets.py [skill ...]
-Sans argument : tous les skills.
+Usage (depuis la racine de mes-skills/) : python3 fabriquer_paquets.py
 """
-import os, sys, zipfile
+import os, shutil, zipfile
 
 COMMUN = 'commun/regles-communes.md'
 RENVOI = 'references/regles-communes.md'
 HOOK = 'commun/hook-porte1'
 RENVOI_HOOK = 'references/hook-porte1/'
 
-def fabriquer(skill):
-    with zipfile.ZipFile(f'paquets/{skill}.skill', 'w', zipfile.ZIP_DEFLATED) as z:
-        for racine, _, fichiers in sorted(os.walk(skill)):
-            for f in sorted(fichiers):
-                z.write(os.path.join(racine, f))
-        texte = open(f'{skill}/SKILL.md', encoding='utf-8').read()
-        if RENVOI in texte:
-            z.write(COMMUN, f'{skill}/{RENVOI}')
-        if RENVOI_HOOK in texte:
-            for f in sorted(os.listdir(HOOK)):
-                z.write(os.path.join(HOOK, f), f'{skill}/{RENVOI_HOOK}{f}')
 
-skills = sys.argv[1:] or sorted(d for d in os.listdir('.') if os.path.isfile(f'{d}/SKILL.md'))
-for s in skills:
-    fabriquer(s)
-    print('ok', s)
+def copier_communs(skill):
+    texte = open(f'{skill}/SKILL.md', encoding='utf-8').read()
+    if RENVOI in texte:
+        os.makedirs(f'{skill}/references', exist_ok=True)
+        shutil.copyfile(COMMUN, f'{skill}/{RENVOI}')
+    if RENVOI_HOOK in texte:
+        os.makedirs(f'{skill}/{RENVOI_HOOK}', exist_ok=True)
+        for f in sorted(os.listdir(HOOK)):
+            shutil.copyfile(os.path.join(HOOK, f), f'{skill}/{RENVOI_HOOK}{f}')
+
+
+def fichiers(skill):
+    for racine, _, noms in sorted(os.walk(skill)):
+        for f in sorted(noms):
+            yield os.path.join(racine, f)
+
+
+skills = sorted(d for d in os.listdir('.') if os.path.isfile(f'{d}/SKILL.md'))
+os.makedirs('paquets', exist_ok=True)
+with zipfile.ZipFile('mes-skills.zip', 'w', zipfile.ZIP_DEFLATED) as tout:
+    for s in skills:
+        copier_communs(s)
+        with zipfile.ZipFile(f'paquets/{s}.skill', 'w', zipfile.ZIP_DEFLATED) as z:
+            for f in fichiers(s):
+                z.write(f)
+                tout.write(f)
+        print('ok', s)

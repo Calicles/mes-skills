@@ -1,4 +1,15 @@
-# Skills tirés du Domaine oublié
+# Mes skills perso
+
+Dépôt de référence de mes skills claude.ai : un dossier par skill, avec son `SKILL.md` à la racine.
+
+## Régénérer les copies et le zip
+1. Les règles communes et le hook ne se modifient que dans `commun/` (`regles-communes.md`, `hook-porte1/`).
+2. Les fichiers `<skill>/references/regles-communes.md` et `<skill>/references/hook-porte1/` sont des copies générées : ne pas les modifier.
+3. Après toute modification, lancer `python3 fabriquer_paquets.py` depuis la racine de ce dossier.
+4. Le script recopie les fichiers communs dans chaque skill qui y renvoie, refait `paquets/<skill>.skill` et `mes-skills.zip`.
+5. Commiter le tout (le zip est ignoré par git) ; importer dans claude.ai `mes-skills.zip` ou les fichiers `paquets/*.skill`, un par skill.
+
+## Origine : skills tirés du Domaine oublié
 
 Capitaliser la manière dont l'addon a été construit, en skills personnels claude.ai (en français).
 
