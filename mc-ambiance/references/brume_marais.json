@@ -1,0 +1,22 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:fog_settings": {
+    "description": {
+      "identifier": "aventure:brume_marais"
+    },
+    "distance": {
+      "air": {
+        "fog_start": 5,
+        "fog_end": 56,
+        "fog_color": "#6e7a58",
+        "render_distance_type": "fixed"
+      },
+      "weather": {
+        "fog_start": 4,
+        "fog_end": 44,
+        "fog_color": "#5f6a4c",
+        "render_distance_type": "fixed"
+      }
+    }
+  }
+}

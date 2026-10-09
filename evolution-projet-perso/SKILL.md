@@ -1,0 +1,79 @@
+---
+name: "evolution-projet-perso"
+description: "Pour une évolution ou une nouvelle fonctionnalité sur un projet déjà cadré et designé (docs/ dans le dépôt GitHub, avec ou sans code), en faisant d'abord raconter ce que la personne imagine (maïeutique, voix des utilisateurs, idées qui émergent) ; pour un jeu vidéo, passe par le parcours game design (jeu-video-parcours, puis mc-addon-parcours pour un addon Minecraft) ; gère aussi le passage en code d'un projet sans code, sans rien déplacer."
+---
+
+# Évolution d'un projet déjà cadré
+
+## Règles communes : à lire avant toute action
+
+**Jamais de code sans fiche validée** : porte 1 (fiche, planches dans `ressources/planches/`, « je valide » explicite) avant tout code livré ; porte 2 (rendu final validé) avant toute fusion.
+Avant de commencer, lire dans `references/regles-communes.md` les sections « Les deux portes, version générique (projets hors jeu) » et « Ce qui se voit » : elles font foi (les autres sections ne s'appliquent pas à ce skill).
+Ci-dessous, seulement ce qui est propre à ce skill.
+
+**Dans ce skill** : les deux portes s'appliquent à toute évolution d'un projet avec code, même minuscule. Pour un jeu vidéo, elles sont tenues par les skills des parcours (`jeu-video-parcours`, `mc-addon-parcours`), qu'on ne saute jamais.
+
+**Dans ce skill** : dès le récit de l'évolution, si elle ajoute quelque chose qui se voit, demander une image de référence et faire écrire la liste de tout ce qu'elle ajoute.
+
+## Quand utiliser ce skill
+
+Quand la personne demande d'ajouter, modifier ou étendre une fonctionnalité (ou un livrable) sur un projet qui a déjà un `cadrage.md` et un `design.md` dans le dossier `docs/` de son dépôt GitHub — pas pour cadrer ou designer un projet depuis le départ (dans ce cas, utiliser `cadrage-projet-perso` puis `design-solution-perso`). Ce skill est volontairement plus léger que ces deux-là : il ne relance pas tout le rituel de validation élément par élément, il applique juste leurs réflexes essentiels à l'échelle d'une seule évolution.
+
+Il s'applique aux projets avec code comme aux projets sans code. Il contient aussi la procédure de **passage en code** d'un projet qui n'en avait pas (section dédiée plus bas).
+
+## Emplacement de référence du projet (règle commune à tout le workflow)
+
+Un projet = UN dépôt GitHub privé = UN seul endroit pour tout ce qui le concerne, quelle que soit la surface utilisée (Claude, Cowork, Claude Code, Claude AI) et que le projet nécessite du code ou non. Même structure dans les deux cas :
+
+- `docs/` : uniquement les documents de référence (`cadrage.md`, `design.md`, `wireframe.md`, `wireframe.html`, plus `docs/game-design/` pour un jeu vidéo (un fichier par métier : `experience-joueur.md`, `gameplay.md`, `level-design.md`, `personnages.md`, `architecture.md`, `mobilier-decor.md`), `journal-decisions.md` (les décisions datées) et `fiche-<étape>.md` (les fiches de réalisation)) ;
+- `livrables/` : ce que le projet produit (si un livrable vit dans un Doc ou un artifact claude.ai, y ranger son export, sa source ou son lien dans `livrables/liens.md`) ;
+- `ressources/` : recherches, sources, notes de travail ;
+- `src/` : le code, projets avec code uniquement ;
+- `CLAUDE.md` à la racine, toujours, avec la ligne `Type : sans code` ou `Type : avec code` (le modèle est dans le skill `cadrage-projet-perso`) ; `README.md` d'une ligne.
+
+Règles : retrouver le dépôt avec `gh repo list --topic projet-perso` (ou le nom donné par la personne), le cloner ou faire `git pull` avant de lire ; après toute modification, commit avec un message clair puis `git push`, sans jamais laisser un fichier modifié non poussé ; aucune autre copie de référence (ni dossier local, ni espace cloud seul, ni mémoire, ni Projet Claude). Si le projet n'a pas de dépôt mais que ses documents existent ailleurs, utiliser d'abord le skill `migration-projet-perso`. Si GitHub est inaccessible depuis la surface en cours, le dire clairement et ne rien enregistrer ailleurs en silence.
+
+## Pourquoi ce skill existe
+
+Une demande d'évolution qui va directement à l'implémentation saute deux garde-fous que `cadrage-projet-perso` et `design-solution-perso` appliquent normalement à un projet entier : vérifier que la demande sert toujours le vrai besoin, et débusquer les mécanismes concrets qu'elle cache avant de choisir une solution. Sauter ces réflexes est justement ce qui, plus tard, révèle des trous dans le design (par exemple un champ de statut jamais vraiment mécanisé, ou une fonctionnalité "gérer X" qui n'a jamais traité sa moitié "modifier ce qui existe déjà").
+
+## La maïeutique (même pour une évolution)
+
+Les questions de ce skill ne sont pas un formulaire à remplir : elles servent à faire exprimer à la personne, aussi loin que possible, ce qu'elle imagine, et à laisser émerger ce qu'elle n'avait pas encore formulé, pour produire ce qui lui ressemble et ce qu'attendent vraiment ceux qui s'en serviront. Claude ne tranche rien seul ; ses propositions servent à affiner ce que la personne a exprimé, jamais à le remplacer.
+
+- **Ouvrir avant de proposer** — avant de lister les mécanismes ou de proposer des options, demander à la personne de raconter l'évolution telle qu'elle l'imagine, et pour qui : « raconte-moi le moment où tu (ou tes utilisateurs) t'en sers ». Reformuler ce qui a été dit (« si je te suis bien… ») et relancer : pourquoi ? qu'est-ce que ça évoque ? ça ressemble à quoi que tu connais ? raconte-moi le moment où… Creuser chaque mot vague jusqu'à ce que la personne dise « oui, c'est exactement ça ». Les options (2 ou 3, en cartes avec le skill `poser-questions-en-cards` s'il est installé) ne viennent qu'**ensuite**, en partant de ses mots, pour préciser ou pour l'aider si elle sèche ; la recommandation vient en dernier, avec sa raison en une phrase.
+- **Suivre son fil** — l'ordre des questions à l'intérieur de chaque étape est un repère, pas un script (les étapes elles-mêmes gardent leur enchaînement) : si la personne part ailleurs, la suivre, puis revenir aux thèmes qui n'ont pas été abordés avant de conclure. Ne pas reposer ce qui est déjà dit ou tranché, mais signaler une contradiction.
+- **La voix des utilisateurs** — dès que d'autres personnes que la personne elle-même se serviront du projet (famille, enfants, amis, joueurs), recueillir ce qu'elle sait d'eux : ce qu'ils aiment, ce qu'ils font aujourd'hui, ce qu'ils ont dit, réclamé, ignoré, et qui aime quoi. Proposer **3 ou 4 questions à leur poser** (courtes et concrètes, adaptées à leur âge), puis reprendre avec leurs réponses. Signaler quand ce que la personne imagine et ce que les utilisateurs semblent attendre s'écartent, et en faire une question.
+- **Ce qui émerge** — noter toute idée apparue en route, même hors sujet, et demander régulièrement « qu'est-ce qui te vient d'autre ? ». Relire ces idées à la fin de chaque grand bloc ; pour chacune, la personne décide : maintenant, plus tard (notée dans le document, section des idées pour plus tard), ou abandonnée.
+- **Finir par la scène** — avant de réaliser, raconter l'évolution comme une scène vécue, puis demander : « est-ce ce que tu imaginais ? qu'est-ce qui manque ? ». Chaque écart relance l'interview avant de réaliser.
+
+Ces principes restent proportionnés à l'évolution (quelques questions, pas un rituel), mais ne se sautent pas. Ils s'ajoutent aux règles ci-dessous (un lot court par message, challenge, garde-fous) sans les remplacer : une question ouverte reste une seule question, et un message reste un seul lot.
+
+## Étapes
+
+0. **Retrouver le projet** — cloner ou mettre à jour le dépôt, lire `CLAUDE.md` (notamment la ligne `Type`), `docs/cadrage.md` et `docs/design.md` (et `docs/wireframe.md`, `docs/game-design/` et `docs/journal-decisions.md` s'ils existent) avant toute chose.
+0 bis. **Faire raconter l'évolution** — question ouverte d'abord (voir "La maïeutique") : ce que la personne imagine, pour qui, ce que ses utilisateurs en diraient ; noter les idées qui émergent.
+1. **Rattacher la demande au cadrage existant** — lire (ou se rappeler) le vrai besoin, le périmètre et les contraintes du `cadrage.md`. En une phrase, dire à quoi la demande se rattache (elle sert le vrai besoin, elle prolonge le périmètre, ou elle semble s'en éloigner — le signaler franchement si c'est le cas, sans bloquer, juste pour que la personne tranche en connaissance de cause).
+2. **Débusquer les mécanismes cachés avant de proposer une solution** — une demande formulée comme un titre ("ajouter la visualisation de X", "permettre de supprimer Y") cache presque toujours des questions concrètes non tranchées : comment cette donnée évolue-t-elle dans le temps ? qu'est-ce que l'action affecte exactement (seulement l'affichage, ou aussi une autre donnée liée) ? que se passe-t-il dans les cas limites (donnée vide, élément déjà supprimé ailleurs, historique antérieur à la fonctionnalité, etc.) ? Lister ces mécanismes avant de coder ou de produire quoi que ce soit. Pour un jeu (mod, addon), ajouter à cette liste **la cohérence avec le jeu de base** : pour chaque élément nouveau, son équivalent dans le jeu et tout ce que cet équivalent fait (formes, recettes, fonte, butin, équipement, sons, apparition). Chaque point est tranché par la personne, sans attendre qu'elle remarque un manque en jouant.
+2 bis. **Jeu vidéo : passer par le game design** — si le projet est un jeu vidéo (ou un mod, un addon, une carte d'aventure) et que l'évolution touche le jeu (un lieu, un personnage, une quête, une ambiance, un objet), charger `jeu-video-parcours` en mode évolution (**obligatoire, jamais sauté**, même si la scène est validée ou si les décisions semblent prises : on ne va pas directement à `mc-addon-parcours`) : il ne déroule que les métiers concernés (par exemple, un nouveau PNJ → personnages et gameplay). Si c'est un addon Minecraft, il enchaîne avec `mc-addon-parcours`, qui traduit les décisions en blocs, entités et scripts, puis vérifie et livre. Les étapes 3 à 5 ci-dessous s'appliquent aux mécanismes qui restent hors game design.
+3. **Trancher chaque mécanisme un par un** — pour chaque mécanisme identifié à l'étape 2 : si plusieurs façons plausibles existent, les présenter (2-3 options, avec avantages/limites) dans un message court et laisser la personne choisir avant de continuer ; si une seule option sensée s'impose, le dire explicitement et ne demander qu'une confirmation rapide plutôt que fabriquer une fausse divergence. Un mécanisme = une décision = un message (ou une question), jamais plusieurs mécanismes tranchés d'un coup dans la même question.
+4. **Réaliser, et garder les documents à jour** — selon le type du projet :
+   - **Projet avec code** : le code est écrit dans Claude Code, dans le dépôt du projet. Deux cas :
+     - *On est déjà dans une session Claude Code sur le dépôt* : **ne pas coder tout de suite**. D'abord la porte 1 : la fiche de réalisation de tout ce que l'évolution fait apparaître, les planches dessinées hors du projet, et le « je valide » explicite de la personne (voir « Les deux portes »). Puis seulement, avec son accord, réaliser et mettre à jour `docs/` dans le même commit que le code. Enfin la porte 2 avant toute fusion. Pas besoin de wireframe formel pour un ajustement ponctuel, sauf si l'évolution introduit un écran ou un parcours entièrement nouveau : dans ce cas, `wireframing-perso` reste pertinent avant de construire.
+     - *On est sur une autre surface (Claude, Cowork, Claude AI)* : ne pas coder ici. Reporter d'abord les décisions dans `docs/` (étape 5), commit + push, puis donner à la personne un message prêt à coller dans Claude Code, par exemple : "Lis CLAUDE.md et docs/, puis prépare l'évolution décrite dans docs/design.md, section <nom de la section> : commence par la porte 1 (fiche et planches à me faire valider), sans coder avant mon accord." Sauf si la personne demande explicitement de coder ici.
+   - **Projet sans code** : ne pas coder. Produire ou mettre à jour le livrable depuis la surface en cours, le ranger dans `livrables/` (et les recherches associées dans `ressources/`), puis mettre à jour `docs/` (étape 5) dans le même commit. Si l'évolution demandée nécessite en réalité du code, suivre la section "Passage en code" ci-dessous avant toute implémentation.
+5. **Mettre à jour la documentation du projet** — reporter les décisions prises (mécanisme retenu, options écartées et pourquoi, idées notées pour plus tard, changements de périmètre, limites connues comme l'absence de reconstitution rétroactive des données passées) dans `docs/cadrage.md` et/ou `docs/design.md` (et `docs/wireframe.md` + `docs/wireframe.html` si un écran ou un parcours a changé, le fichier du métier dans `docs/game-design/` pour un jeu), avec une entrée datée dans `docs/journal-decisions.md`, pour que ces documents restent fidèles à ce qui existe vraiment plutôt que de figer une photo du jour du cadrage initial. Commit + push dans le dépôt.
+
+## Passage en code d'un projet sans code
+
+A utiliser quand un projet `Type : sans code` a maintenant besoin de code (une automatisation, un outil, une app pour remplacer ou prolonger ce qui se faisait à la main). Aucun fichier ne se déplace : le dépôt, `docs/`, `livrables/` et `ressources/` restent tels quels ; on complète et on change quelques lignes.
+
+1. **Vérifier que le code est vraiment justifié** — rattacher la demande au besoin du `cadrage.md` (étape 1 ci-dessus) et challenger en une question : un outil existant, un tableur ou un livrable mieux fait ne résoudrait-il pas déjà le problème ? Si la personne confirme, continuer.
+2. **Compléter le design** — débusquer et trancher les mécanismes de la partie à coder (étapes 2 et 3 ci-dessus). Dans `docs/design.md`, remplacer "choix techniques : sans objet" par les choix techniques réels (le plus simple compatible avec les contraintes du cadrage), ajouter les fonctionnalités à coder, leur definition of done et la première étape de réalisation, formulée pour pouvoir être donnée telle quelle à Claude Code. Si le périmètre ou le besoin changent, mettre aussi `docs/cadrage.md` à jour.
+3. **Proposer les wireframes** si l'outil a une interface qui mérite d'être pensée avant de coder (`wireframing-perso`).
+4. **Basculer le type** — dans `CLAUDE.md` : `Type : avec code` et la variante "avec code" de la règle 2 ; dans le dépôt : créer `src/` (avec un `.gitkeep`), installer le hook de la porte 1 : copier `references/hook-porte1/porte1.py` dans `.claude/hooks/porte1.py` et `references/hook-porte1/settings.json` dans `.claude/settings.json` (s'il existe déjà, y ajouter seulement le bloc `PreToolUse`), puis vérifier qu'une écriture dans `src/` est refusée tant qu'aucune fiche n'est « VALIDÉE » (le modèle de `CLAUDE.md` du skill `cadrage-projet-perso` le décrit à la règle 0), et changer le topic (`gh repo edit --remove-topic sans-code --add-topic avec-code`). Commit + push.
+5. **Passer le relais** — sauf demande explicite de la personne (et jamais avant la porte 1), ne pas coder sur la surface en cours : donner le message à coller dans Claude Code ("Lis CLAUDE.md et docs/, puis prépare la première étape de docs/design.md : commence par la porte 1 (fiche et planches à me faire valider), sans coder avant mon accord.").
+
+## Ce que ce skill n'est pas
+
+Il ne remplace pas `cadrage-projet-perso` (cadrer un nouveau projet depuis le départ) ni `design-solution-perso` (concevoir une solution complète avec plusieurs pistes explorées en profondeur, interview moment par moment) : ce sont des rituels plus lourds, adaptés à un projet entier ou une fonctionnalité majeure. Ce skill est le format réduit pour une évolution ponctuelle sur l'existant — il emprunte leurs réflexes (rattacher au besoin, débusquer les mécanismes, diverger seulement quand il y a un vrai choix, documenter la décision) sans repasser par toutes leurs étapes de validation élément par élément.
