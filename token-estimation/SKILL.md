@@ -1,5 +1,5 @@
 ---
-name: token-estimation
+name: "token-estimation"
 description: Estime le coût de développement d'une tâche, user story ou ticket EN COÛT DE TOKENS (pas en story points), pour des équipes dont le code sera écrit par Claude Code ou un autre agent IA. Utilise ce skill dès qu'on parle d'estimer, chiffrer ou évaluer la charge d'une tâche de dev, d'une user story, d'un ticket, ou de planifier/prioriser un sprint ou une backlog — même si l'utilisateur ne dit pas explicitement "tokens" ou "estimation". Si une tâche s'avère trop grosse (palier XL), le skill propose aussi un découpage en sous-tâches plus petites.
 ---
 
