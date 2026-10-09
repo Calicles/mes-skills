@@ -1,5 +1,5 @@
 ---
-name: jeu-level-design
+name: "jeu-level-design"
 description: "Mène l'interview de direction artistique des niveaux (en maïeutique : questions ouvertes d'abord, options et recommandation ensuite : ambiance et inspirations, taille, relief, chemins, repères, secrets), puis les conçoit. Concevoir le level design d'un jeu vidéo, d'un mod ou d'un addon : structure du monde (QG et régions), placement des lieux, guidage du joueur sans flèche permanente, densité de points d'intérêt, rythme tension/repos, verrous et clés, donjons salle par salle, frontières, secrets, allers-retours. À utiliser dès qu'on parle de carte, de monde, de zones, de donjon, de niveau, de chemin, de « où mettre ce lieu », de frontière, d'exploration ou de joueurs qui se perdent, même sans dire « level design ». Troisième métier de jeu-video-parcours."
 ---
 

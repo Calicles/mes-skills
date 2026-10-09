@@ -1,5 +1,5 @@
 ---
-name: mc-design-en-blocs
+name: "mc-design-en-blocs"
 description: "Mène l'interview de direction en blocs (en maïeutique : questions ouvertes d'abord, options et recommandation ensuite : palette de blocs, matières, couleurs, échelle, détails), ne code qu'après fiche validée. Traduire bâtiments, lieux, terrains et mobilier en blocs Minecraft Bedrock construits par script : palettes de blocs par style, échelle (1 bloc = 1 m), noms et états de blocs valides (brick_block, iron_chain, cardinal_direction…), appuis (lanternes, torches, plantes), orientation (coffres, fours, meubles), terrassement et raccord en pente au terrain réel, chemins taillés, cavernes sculptées, nettoyage des restes d'arbres, construction étape par étape. À utiliser dès qu'on construit ou modifie un lieu, une maison, un donjon, une caverne, une route ou une pièce dans un addon Minecraft, ou qu'un bloc est refusé, flotte ou regarde un mur, même sans dire « blocs ». Spécialise jeu-architecture et jeu-mobilier-decor."
 ---
 

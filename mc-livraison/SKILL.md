@@ -1,5 +1,5 @@
 ---
-name: mc-livraison
+name: "mc-livraison"
 description: "Mène l'interview de livraison (en maïeutique : questions ouvertes d'abord, options et recommandation ensuite : nom, icône, Realm, sauvegardes, procédure), ne code qu'après fiche validée, puis livre un addon Minecraft Bedrock jusqu'aux joueurs sans abîmer leur monde : manifests (UUID fixes, version montée à chaque livraison, min_engine_version jamais montée, dépendance exacte entre packs), fabrication des .mcpack et .mcaddon, vérification automatique dans GitHub, serveur de test BDS sur le PC (server.properties propre, graine, triches, connexion de la Switch par BedrockConnect), publication sur un Realm avec sauvegarde (ou restauration, ou monde neuf sur la graine), README de test. À utiliser dès qu'on publie, met à jour, empaquette ou installe un addon, qu'on prépare le serveur de test ou le Realm, ou que l'addon ne se charge pas, que la Switch ne se connecte pas ou qu'un monde s'ouvre sans l'addon, même sans dire « livraison »."
 ---
 

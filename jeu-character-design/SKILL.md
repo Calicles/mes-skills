@@ -1,5 +1,5 @@
 ---
-name: jeu-character-design
+name: "jeu-character-design"
 description: "Mène l'interview de direction artistique des personnages d'un jeu vidéo, d'un mod ou d'un addon, puis les conçoit : la personne décide de tout, en maïeutique : questions ouvertes d'abord, options et recommandation ensuite (ressenti voulu, inspirations, nom, personnalité, silhouette, visage, vêtements, matières et textures, couleurs, accessoires, comportement, voix, répliques, mise en scène, planche à valider). Couvre PNJ (habitants, donneurs de quêtes, marchands), mobs et créatures (ennemis, gardiens, boss), animaux passifs, compagnons et bestiaires par zone. À utiliser dès qu'on crée ou modifie un personnage, PNJ, monstre, créature, boss, animal, compagnon, son apparence, sa texture ou ses dialogues, même sans dire « character design ». Quatrième métier de jeu-video-parcours."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: mc-entites
+name: "mc-entites"
 description: "Mène l'interview de direction des entités (en maïeutique : questions ouvertes d'abord, options et recommandation ensuite : modèle, texture, couleurs, animations, sons, comportement), ne code qu'après fiche validée. Réaliser les créatures et personnages d'un addon Minecraft Bedrock : entité de comportement (composants, familles, invincibilité, apparitions et plafonds), entité client (géométrie en box UV, texture générée par script, matériaux transparent ou lumineux, animations de marche et de gestes à nous), PNJ fiables (un seul, à sa place, nom affiché), dialogues natifs ou fenêtres de script, montures et compagnons, butin. À utiliser dès qu'on ajoute ou modifie un mob, un PNJ, un animal, un boss, une monture, une texture, un modèle ou une animation dans un addon, ou qu'une créature glisse, reste figée, apparaît en double ou perd son nom, même sans dire « entité ». Spécialise jeu-character-design."
 ---
 

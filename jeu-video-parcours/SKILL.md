@@ -1,5 +1,5 @@
 ---
-name: jeu-video-parcours
+name: "jeu-video-parcours"
 description: "Ouvre et referme la grande interview de game design, une maïeutique : chaque métier pose ses questions, la personne donne la direction artistique point par point. Chef d'orchestre du game design d'un jeu vidéo (ou d'un mod, addon, carte d'aventure) : enchaîne dans l'ordre les skills métiers jeu-experience-joueur, jeu-gameplay, jeu-level-design, jeu-character-design, jeu-architecture et jeu-mobilier-decor, en entier pour un nouveau projet (après cadrage, design et wireframe), ou seulement ceux qu'une évolution touche. À utiliser dès qu'un projet perso est un jeu vidéo ou s'en approche (jeu, mod, addon Minecraft, aventure, quêtes, monde à explorer), à la fin de wireframing-perso ou pendant evolution-projet-perso, même si la personne ne dit pas « game design ». Pour un addon Minecraft, passe ensuite la main à mc-addon-parcours."
 ---
 

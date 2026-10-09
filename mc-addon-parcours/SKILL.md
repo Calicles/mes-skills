@@ -1,5 +1,5 @@
 ---
-name: mc-addon-parcours
+name: "mc-addon-parcours"
 description: "Ouvre l'interview du socle de l'addon puis enchaîne les interviews de chaque skill du lot 2 : la personne décide de tout ce que les joueurs verront, et on ne code qu'après fiche validée. Chef d'orchestre de la réalisation d'un addon Minecraft Bedrock (nouveau ou évolution d'un existant) : prend la suite de jeu-video-parcours et enchaîne mc-design-en-blocs, mc-entites, mc-scripts-gameplay, mc-monde-et-chargement, mc-ambiance, mc-verification et mc-livraison, pour traduire le game design en blocs, entités, scripts et monde, le vérifier puis le livrer (serveur de test, Realm). À utiliser dès qu'un projet est un addon, un pack de comportement ou de ressources, une carte d'aventure ou un monde Minecraft Bedrock (Switch, Realm, serveur BDS), même sans dire « addon »."
 ---
 

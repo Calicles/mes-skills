@@ -1,5 +1,5 @@
 ---
-name: jeu-mobilier-decor
+name: "jeu-mobilier-decor"
 description: "Mène l'interview de direction artistique du mobilier et du décor (en maïeutique : questions ouvertes d'abord, options et recommandation ensuite : ressenti, inspirations, matières, couleurs, détails qui racontent), puis les conçoit. Concevoir le mobilier et le décor d'un jeu vidéo, d'un mod ou d'un addon : décor complet par pièce, objets tournés vers leur usage, densité de détails, cohérence avec le thème et l'habitant, objets interactifs ou décoratifs, meubles sur mesure, salles des trophées, décor qui évolue au fil de l'aventure. À utiliser dès qu'on parle de meubles, de décoration, d'aménagement d'une pièce, d'objets à poser, de props, de « rendre un lieu vivant » ou d'une salle trop vide, même sans dire « mobilier ». Sixième et dernier métier de jeu-video-parcours."
 ---
 

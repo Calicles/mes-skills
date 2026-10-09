@@ -1,5 +1,5 @@
 ---
-name: mc-ambiance
+name: "mc-ambiance"
 description: "Mène l'interview d'ambiance (en maïeutique : questions ouvertes d'abord, options et recommandation ensuite : brumes, lumière, musique, sons, titres, recettes de transition), ne code qu'après fiche validée. Réaliser l'ambiance et les transitions d'un addon Minecraft Bedrock : brumes par zone (fichiers fogs et commande /fog), heure figée et nuit de pleine lune, musique par lieu avec les morceaux du jeu (world.playMusic, une seule musique pour un écran partagé), sons, particules, titres et sous-titres, écran noir (camera fade), ligne d'objectif, textes lisibles sur un quart d'écran. À utiliser dès qu'on règle l'atmosphère d'un lieu, une mise en scène (arrivée, fête, apparition), la musique, la météo, la lumière ou la lisibilité des textes dans un addon, même sans dire « ambiance ». Spécialise jeu-experience-joueur."
 ---
 

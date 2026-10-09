@@ -1,5 +1,5 @@
 ---
-name: jeu-gameplay
+name: "jeu-gameplay"
 description: "Mène l'interview de direction du gameplay (en maïeutique : questions ouvertes d'abord, options et recommandation ensuite : boucle, forme des quêtes, événements, combats, récompenses, coopération, difficulté), puis l'écrit. Concevoir le gameplay d'un jeu vidéo, d'un mod ou d'un addon : boucle de jeu, quêtes principales et secondaires (simples, en chaîne, à tiroirs, à embranchements), événements (invasion, objet qui déclenche, kit du maître du jeu), objectifs partagés en coopération, récompenses (communes et personnelles), progression et difficulté, énigmes, combats de boss en phases, rejouabilité. À utiliser dès qu'on parle de quêtes, de missions, d'objectifs, de récompenses, d'événements, de boss, d'énigmes, de progression, d'économie (pièces, gemmes, marchand) ou de « quoi faire dans le jeu », même sans dire « gameplay ». Deuxième métier de jeu-video-parcours."
 ---
 

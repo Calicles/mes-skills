@@ -1,5 +1,5 @@
 ---
-name: mc-verification
+name: "mc-verification"
 description: "Mène l'interview de la campagne de test (qui teste, quoi, comment, question par question en cartes), ne code qu'après fiche validée, puis vérifie un addon Minecraft Bedrock avant de le livrer, sans serveur ni console : vérification des types des scripts (tsc --checkJs avec les déclarations @minecraft), banc de simulation hors jeu (faux serveur, monde plat, tous les lieux construits, blocs et états validés contre la liste officielle du jeu, audit des objets qui flottent ou regardent un mur), essais de la logique avec de faux joueurs et des fenêtres pilotables, planches de rendu, puis vérification en jeu guidée (baguette et carnet du testeur, points « non vérifiés en jeu »). À utiliser avant chaque livraison d'addon, quand un bloc est refusé ou disparaît, quand on demande « est-ce que ça marche ? », ou pour préparer une campagne de test, même sans dire « vérification »."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: mc-scripts-gameplay
+name: "mc-scripts-gameplay"
 description: "Mène l'interview des règles du jeu en script (en maïeutique : questions ouvertes d'abord, options et recommandation ensuite : quêtes, dialogues, récompenses, carnet, événements, outils de test), ne code qu'après fiche validée. Programmer le gameplay d'un addon Minecraft Bedrock avec la Script API (@minecraft/server, @minecraft/server-ui) : état de l'aventure sauvegardé dans le monde et gardé en mémoire, surveillances régulières, quêtes et objectifs partagés, dialogues et fenêtres, objets à utiliser, récompenses pour chacun et pour les absents, quêtes à tiroirs, événements du monde (invasion, déclencheurs, kit du maître du jeu) et de l'API (créature vaincue, interaction, objet utilisé), commandes et outils de test (baguette et carnet du testeur, sauts d'étape). À utiliser dès qu'on écrit ou corrige un script d'addon, une quête, un PNJ qui parle, un objet magique, une récompense, une commande de test, ou qu'une erreur apparaît dans la console du serveur, même sans dire « Script API ». Spécialise jeu-gameplay."
 ---
 

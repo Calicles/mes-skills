@@ -1,5 +1,5 @@
 ---
-name: jeu-architecture
+name: "jeu-architecture"
 description: "Mène l'interview de direction artistique des bâtiments (en maïeutique : questions ouvertes d'abord, options et recommandation ensuite : ressenti, inspirations, style, matériaux, couleurs, taille, intérieur), puis les conçoit. Concevoir les bâtiments et grands lieux construits d'un jeu vidéo, d'un mod ou d'un addon : fonction, silhouette visible de loin, style (médiéval, gothique, nain, féérique…), échelle par rapport au joueur, intérieur et extérieur, entrées, éclairage, ruine puis restauration, bâtiment qui raconte une histoire. À utiliser dès qu'on parle de bâtiment, maison, château, tour, cabane, ruine, demeure, village, cité, donjon à construire ou à restaurer, façade ou toit, même sans dire « architecture ». Cinquième métier de jeu-video-parcours."
 ---
 

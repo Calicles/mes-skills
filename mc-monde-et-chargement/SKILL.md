@@ -1,5 +1,5 @@
 ---
-name: mc-monde-et-chargement
+name: "mc-monde-et-chargement"
 description: "Mène l'interview du monde (en maïeutique : questions ouvertes d'abord, options et recommandation ensuite : graine, emplacement, attentes, écrans de chargement), ne code qu'après fiche validée. Concevoir et fiabiliser le monde d'un addon Minecraft Bedrock : graine fixe, emplacement des régions (domaine, régions lointaines, cavernes sous terre), choix du terrain et des biomes, terrain réel et aplanissement, zones de chargement (tickingarea), distance de simulation, construction des lieux d'avance ou à l'approche, écran d'attente pendant la préparation, blocs refusés faute de terrain chargé, frontières et leurs exceptions, temps de chargement et fluidité à quatre joueurs sur Switch. À utiliser dès qu'on place un lieu ou une région, qu'un lieu ne se construit pas, se construit dans le ciel ou à moitié, qu'une zone met du temps à charger, qu'un monde neuf diffère du monde de test, ou qu'on parle de performance, de lag ou de création du monde, même sans dire « chargement ». Spécialise jeu-level-design."
 ---
 

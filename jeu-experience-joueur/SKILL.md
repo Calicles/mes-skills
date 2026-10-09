@@ -1,5 +1,5 @@
 ---
-name: jeu-experience-joueur
+name: "jeu-experience-joueur"
 description: "Mène l'interview de direction de l'expérience joueur (en maïeutique : questions ouvertes d'abord, options et recommandation ensuite : public, émotions, ton, inspirations, immersion, rythme, transitions), puis l'écrit. Concevoir l'expérience du joueur d'un jeu vidéo, d'un mod ou d'un addon : émotions visées, public (âge, jeu à plusieurs, écran partagé), immersion, transitions (arrivées, apparitions, fêtes, fins de chapitre), ambiance (lumière, météo, sons, musique), lisibilité de l'interface et « jamais d'effet vide ». À utiliser dès qu'on parle de ce que le joueur doit ressentir, d'ambiance, d'immersion, de moment marquant, d'arrivée dans un lieu, de récompense à mettre en scène, de musique ou de lisibilité, même sans dire « expérience joueur ». Premier métier de jeu-video-parcours."
 ---
 
