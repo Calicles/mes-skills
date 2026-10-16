@@ -79,6 +79,10 @@ Pour toute mécanique nouvelle, un petit script Node qui importe le module avec 
 ### 4. Les planches
 Rendre en image, depuis le monde simulé ou depuis le modèle et la texture : un bâtiment de face, une coupe de caverne, une créature de face et de profil. Deux moments : **avant le code** (porte 1), les planches de ce qui sera fait, dessinées hors des packs, dans `ressources/planches/` ; **avant la fusion** (porte 2), les mêmes planches refaites depuis les fichiers intégrés, avec les écarts, dans `livrables/planches/`. Chaque fois, attendre le « je valide » explicite. Elles ont souvent fait retoucher un détail (les roues d'une roulotte, la queue d'une licorne, une stèle).
 
+## Les enchaînements déclenchés par le joueur
+
+Un saut de la baguette pose l'état d'une étape, il ne prouve pas que l'étape suivante se déclenche quand le joueur agit (ours passif en fin de combat, transition à 20 % non déclenchée). Pour toute transition provoquée par une action du joueur (fin de quête, combat, porte, apparition), écrire un **scénario d'enchaînement** GameTest avec un joueur simulé qui agit : voir le skill `scenario-e2e-minecraft`.
+
 ## La vérification en jeu
 
 - **Ne jamais dire « vérifié » pour ce qui ne l'est qu'hors jeu.** Chaque livraison liste ses points « non vérifiés en jeu » dans `docs/design.md`.
