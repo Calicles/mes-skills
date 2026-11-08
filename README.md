@@ -32,6 +32,7 @@ que ses joueurs attendent.
 - **La voix des joueurs** : ce qu'ils ont aimé, ignoré, réclamé ; 3 ou 4 questions à leur poser, puis on reprend.
 - **Ce qui émerge** est noté et relu à la fin de chaque bloc : maintenant, plus tard, ou abandonné.
 - **Finir par la scène** racontée comme les joueurs la vivront, puis la fiche validée avant d'écrire.
+- **Des pauses de session** à la fin de chaque bloc : fiche à jour (« Où reprendre », question suivante telle quelle), commit, push, souvenir, prompt de reprise ; la session suivante ne relit que l'essentiel, pour économiser les jetons.
 Le savoir-faire du skill sert à affiner ce que la personne a exprimé, puis à vérifier.
 
 La même maïeutique est ajoutée aux **skills de projet** (`cadrage-projet-perso`, `design-solution-perso`,

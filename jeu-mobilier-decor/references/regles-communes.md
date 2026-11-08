@@ -108,6 +108,19 @@ Pour trouver l'équivalent, se demander : « quel élément du jeu ressemble le 
 - **Noter toute idée apparue en route**, même hors sujet, et demander régulièrement : « qu'est-ce qui te vient d'autre ? »
 - **À la fin de chaque bloc** : un récapitulatif (5 lignes au plus) à valider, puis **relire les idées émergées**. Pour chacune, la personne décide : maintenant, plus tard (notée dans `docs/design.md`, avec les idées pour plus tard), ou abandonnée.
 
+**Les pauses de session (pour économiser les jetons)**
+- Pourquoi : chaque message relit toute la session. Plus une session est longue, plus chaque question coûte cher, et plus l'attention se dilue. Une session neuve qui ne relit que l'essentiel coûte moins cher.
+- **Quand** : Claude fait la pause de lui-même, sans qu'on la demande, à la fin de chaque bloc. Un bloc, c'est un métier, une pièce ou un lieu, ou environ 10 questions si le bloc est plus long. Jamais au milieu d'une question. Si la personne veut continuer, on continue. Pas de pause plus fréquente : chaque reprise a un coût de relecture.
+- **Ce que fait la pause**, dans l'ordre :
+  1. Écrire dans la fiche, section « Où reprendre », l'état des blocs et **la question suivante, telle quelle**, avec ce qui est déjà décidé à son sujet.
+  2. Faire le commit et le push sur la branche de travail.
+  3. Mettre à jour le souvenir du projet, s'il y en a un.
+  4. Donner le **prompt de reprise**, prêt à copier.
+  La pause s'arrête là : on ne pose pas la question suivante.
+- **La section « Où reprendre »** reste courte et se suffit à elle-même : la méthode, l'état de chaque métier ou bloc, la question en attente, ce qui reste dans l'ordre, et les points à reprendre impérativement.
+- **Le prompt de reprise** nomme la branche et le fichier. Il dit de lire seulement « Où reprendre », puis les lignes utiles à la question en attente, **jamais la fiche entière**. Il dit aussi quel skill charger et de reposer la question telle quelle.
+- **À la reprise** : ne relire que ce que dit le prompt. Si une décision ancienne manque, la chercher dans la fiche par une recherche ciblée plutôt que de tout relire.
+
 **Finir par la scène**
 - Avant la fiche, **raconter la scène telle que les joueurs la vivront**, à la première personne, puis demander : « est-ce ce que tu imaginais ? qu'est-ce qui manque ? ». Chaque écart relance l'interview.
 - Puis la **fiche complète** (et la planche s'il y en a une), validée ensemble, avant d'écrire quoi que ce soit dans `docs/` (`docs/design.md` ou le fichier du métier dans `docs/game-design/`). Les réponses y sont reprises avec les mots de la personne, avec les options écartées et les idées notées pour plus tard.
